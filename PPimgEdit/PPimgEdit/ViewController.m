@@ -54,12 +54,10 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *selectedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-//   PPFiltersViewController  *beautyVC = [[PPFiltersViewController alloc] initWithImage:selectedImage];
-    
+   PPFiltersViewController  *beautyVC = [[PPFiltersViewController alloc] initWithImage:selectedImage];    
     KKImageEditorViewController *editor = [[KKImageEditorViewController alloc] initWithImage:selectedImage delegate:self];
-
 //    [imagePicker pushViewController:beautyVC animated:YES];
-    [imagePicker pushViewController:editor animated:YES];
+   [imagePicker pushViewController:editor animated:YES];
 
     
 }

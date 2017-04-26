@@ -8,6 +8,7 @@
 //
 
 #import "PPRotateTool.h"
+#import "Masonry.h"
 #import "UIImage+QMUI.h"
 @implementation PPRotateTool
 {
@@ -32,7 +33,7 @@
 
 - (void)cleanup
 {
-    
+    [rotateBtn removeFromSuperview];
 }
 
 - (void)executeWithCompletionBlock:(void (^)(UIImage *, NSError *, NSDictionary *))completionBlock
@@ -62,10 +63,16 @@
     rotateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [rotateBtn setBackgroundColor:[UIColor redColor]];
     [self.editor.view addSubview:rotateBtn];
-    rotateBtn.frame = CGRectMake(199, 499, 44, 44);
     [rotateBtn setTitle:@"rotate" forState:0];
     [rotateBtn addTarget:self action:@selector(btnTapped:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    [rotateBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.editor.view);
+        make.right.equalTo(self.editor.view);
+        make.bottom.equalTo(self.editor.view);
+        make.height.equalTo(@(44));
+    }];
 }
 
 

@@ -10,6 +10,7 @@
 		23208398919B611E96F47864 /* libPods-PPimgEditUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8CE79D3CA288FD02F4E778 /* libPods-PPimgEditUITests.a */; };
 		2D196416364AF964AAAA11EB /* libPods-PPimgEditTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 658C4EC8D9118146432FF1DB /* libPods-PPimgEditTests.a */; };
 		60C6A03673D23167B68DF1A1 /* libPods-PPimgEdit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FBB68AAB18ED3EE5E42B75 /* libPods-PPimgEdit.a */; };
+		9607430D1EB0B12400D847EC /* PPFilterTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9607430C1EB0B12400D847EC /* PPFilterTool.m */; };
 		96088A061EAF4FA5006195B1 /* effect.png in Resources */ = {isa = PBXBuildFile; fileRef = 960889FC1EAF4FA5006195B1 /* effect.png */; };
 		96088A071EAF4FA5006195B1 /* effectViewInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 960889FD1EAF4FA5006195B1 /* effectViewInfo.plist */; };
 		96088A0E1EAF4FA5006195B1 /* vignetteMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 96088A041EAF4FA5006195B1 /* vignetteMap.png */; };
@@ -228,6 +229,8 @@
 		6B8CE79D3CA288FD02F4E778 /* libPods-PPimgEditUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPimgEditUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FBB68AAB18ED3EE5E42B75 /* libPods-PPimgEdit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PPimgEdit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A86926EE3F53079708006B /* Pods-PPimgEdit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPimgEdit.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPimgEdit/Pods-PPimgEdit.release.xcconfig"; sourceTree = "<group>"; };
+		9607430B1EB0B12400D847EC /* PPFilterTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFilterTool.h; sourceTree = "<group>"; };
+		9607430C1EB0B12400D847EC /* PPFilterTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFilterTool.m; sourceTree = "<group>"; };
 		960889FC1EAF4FA5006195B1 /* effect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effect.png; sourceTree = "<group>"; };
 		960889FD1EAF4FA5006195B1 /* effectViewInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = effectViewInfo.plist; sourceTree = "<group>"; };
 		96088A041EAF4FA5006195B1 /* vignetteMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vignetteMap.png; sourceTree = "<group>"; };
@@ -294,8 +297,8 @@
 		96297FE11EB099ED0029B7B7 /* KKScaleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKScaleButton.m; sourceTree = "<group>"; };
 		96297FE21EB099ED0029B7B7 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		96297FE31EB099ED0029B7B7 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		96297FE61EB099ED0029B7B7 /* PPRotateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRotateTool.h; sourceTree = "<group>"; };
-		96297FE71EB099ED0029B7B7 /* PPRotateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRotateTool.m; sourceTree = "<group>"; };
+		96297FE61EB099ED0029B7B7 /* PPRotateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPRotateTool.h; path = ../PPRotateTool.h; sourceTree = "<group>"; };
+		96297FE71EB099ED0029B7B7 /* PPRotateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPRotateTool.m; path = ../PPRotateTool.m; sourceTree = "<group>"; };
 		96297FE91EB099ED0029B7B7 /* QMUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUIKit.h; sourceTree = "<group>"; };
 		96297FEB1EB099ED0029B7B7 /* QMUICommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUICommonDefines.h; sourceTree = "<group>"; };
 		96297FEC1EB099ED0029B7B7 /* QMUICommonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMUICommonUI.h; sourceTree = "<group>"; };
@@ -621,6 +624,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		960743081EB0B0D300D847EC /* cutTool */ = {
+			isa = PBXGroup;
+			children = (
+				96297FC71EB099ED0029B7B7 /* KKCutCircle.h */,
+				96297FC81EB099ED0029B7B7 /* KKCutCircle.m */,
+				96297FC91EB099ED0029B7B7 /* KKCutGridLayer.h */,
+				96297FCA1EB099ED0029B7B7 /* KKCutGridLayer.m */,
+				96297FCB1EB099ED0029B7B7 /* KKCutGridView.h */,
+				96297FCC1EB099ED0029B7B7 /* KKCutGridView.m */,
+				96297FCD1EB099ED0029B7B7 /* KKCutTool.h */,
+				96297FCE1EB099ED0029B7B7 /* KKCutTool.m */,
+			);
+			name = cutTool;
+			sourceTree = "<group>";
+		};
+		960743091EB0B0E500D847EC /* rotateTool */ = {
+			isa = PBXGroup;
+			children = (
+				96297FE61EB099ED0029B7B7 /* PPRotateTool.h */,
+				96297FE71EB099ED0029B7B7 /* PPRotateTool.m */,
+			);
+			name = rotateTool;
+			sourceTree = "<group>";
+		};
+		9607430A1EB0B0F900D847EC /* fliterTool */ = {
+			isa = PBXGroup;
+			children = (
+				9607430B1EB0B12400D847EC /* PPFilterTool.h */,
+				9607430C1EB0B12400D847EC /* PPFilterTool.m */,
+			);
+			name = fliterTool;
+			sourceTree = "<group>";
+		};
 		960889FB1EAF4FA5006195B1 /* resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,8 +725,6 @@
 				96297FBF1EB099ED0029B7B7 /* ImageEdit */,
 				96297FC61EB099ED0029B7B7 /* ImageTools */,
 				96297FDD1EB099ED0029B7B7 /* ImageUtils */,
-				96297FE61EB099ED0029B7B7 /* PPRotateTool.h */,
-				96297FE71EB099ED0029B7B7 /* PPRotateTool.m */,
 				96297FE81EB099ED0029B7B7 /* QMUIKit */,
 			);
 			path = function;
@@ -712,14 +746,9 @@
 		96297FC61EB099ED0029B7B7 /* ImageTools */ = {
 			isa = PBXGroup;
 			children = (
-				96297FC71EB099ED0029B7B7 /* KKCutCircle.h */,
-				96297FC81EB099ED0029B7B7 /* KKCutCircle.m */,
-				96297FC91EB099ED0029B7B7 /* KKCutGridLayer.h */,
-				96297FCA1EB099ED0029B7B7 /* KKCutGridLayer.m */,
-				96297FCB1EB099ED0029B7B7 /* KKCutGridView.h */,
-				96297FCC1EB099ED0029B7B7 /* KKCutGridView.m */,
-				96297FCD1EB099ED0029B7B7 /* KKCutTool.h */,
-				96297FCE1EB099ED0029B7B7 /* KKCutTool.m */,
+				9607430A1EB0B0F900D847EC /* fliterTool */,
+				960743091EB0B0E500D847EC /* rotateTool */,
+				960743081EB0B0D300D847EC /* cutTool */,
 			);
 			path = ImageTools;
 			sourceTree = "<group>";
@@ -1538,6 +1567,7 @@
 				964F8F721EB0827B00AD8202 /* FWNashvilleFilter.m in Sources */,
 				962980911EB099EE0029B7B7 /* KKImageEditorTheme.m in Sources */,
 				962980A51EB099EE0029B7B7 /* QMUIConfigurationManager.m in Sources */,
+				9607430D1EB0B12400D847EC /* PPFilterTool.m in Sources */,
 				96BF44D71EAF3C8400AD0702 /* ViewController+MASAdditions.m in Sources */,
 				96BF44D61EAF3C8400AD0702 /* View+MASAdditions.m in Sources */,
 				962980C81EB099EE0029B7B7 /* NSObject+QMUI.m in Sources */,

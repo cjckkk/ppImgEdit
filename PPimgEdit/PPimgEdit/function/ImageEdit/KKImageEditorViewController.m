@@ -62,10 +62,7 @@
     
     if([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]){
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }    
-    
-    
-    
+    }
     [self.view setBackgroundColor:[KKImageEditorTheme theme].backgroundColor];
     self.title = self.toolInfo.title;
     [self initMenuView];
@@ -373,4 +370,7 @@
     rct.origin.y = MAX((Hs-H)/2, 0);
     _imageView.frame = rct;
 }
+
+
+
 @end
