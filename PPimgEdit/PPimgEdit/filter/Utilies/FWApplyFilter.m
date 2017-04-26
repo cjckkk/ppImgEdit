@@ -314,7 +314,6 @@
     return [filter imageFromCurrentFramebuffer];
     
     
-//    return [UIImage new];
 }
 
 + (UIImage *)applyValenciaFilter:(UIImage *)image

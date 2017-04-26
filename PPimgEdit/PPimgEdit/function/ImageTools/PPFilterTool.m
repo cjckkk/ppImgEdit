@@ -90,7 +90,7 @@
     
     [self.filterStyleBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.editor.view);
-        make.bottom.equalTo(self.editor.view).with.offset(10);
+        make.bottom.equalTo(self.editor.view).with.offset(-10);
         make.right.equalTo(self.editor.view);
         make.height.equalTo(@(70));
 
