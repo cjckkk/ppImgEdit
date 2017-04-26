@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7vt-Zw-Inc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW0-aS-8o7">
+                                <rect key="frame" x="156.5" y="318.5" width="62" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="选择图片"/>
+                                <connections>
+                                    <action selector="choiceimg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XC2-I8-cqt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6m-2e-GFI">
+                                <rect key="frame" x="156" y="397" width="62" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="编辑模式"/>
+                                <connections>
+                                    <action selector="choiceimg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L0K-dA-4j9"/>
+                                    <action selector="editImg:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fnq-bK-FGb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L6m-2e-GFI" firstAttribute="top" secondItem="AW0-aS-8o7" secondAttribute="bottom" constant="48.5" id="Jhz-nO-L5B"/>
+                            <constraint firstItem="L6m-2e-GFI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZgZ-DC-tWo"/>
+                            <constraint firstItem="AW0-aS-8o7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eOS-wd-0S4"/>
+                            <constraint firstItem="AW0-aS-8o7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nCt-RE-EWE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JWw-eH-Hg9"/>
+                    <connections>
+                        <outlet property="editBtn" destination="L6m-2e-GFI" id="9ay-42-yEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="-48"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uUU-4L-KfD">
+            <objects>
+                <navigationController id="7vt-Zw-Inc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IVW-dU-swr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="i2I-qY-wa8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQg-qZ-fck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="-2"/>
+        </scene>
+    </scenes>
+</document>
